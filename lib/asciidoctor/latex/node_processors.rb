@@ -39,12 +39,12 @@ module TexUtilities
 
   def self.env(env, *args)
     body = args.pop
-    "#{self.begin(env)}#{braces *args}\n#{body}\n#{self.end(env)}\n"
+    "#{self.begin(env)}#{braces *args}\n#{body}\n#{self.end(env)}"
   end
 
   def self.env_opt(env, opt, *args)
     body = args.pop
-    "#{self.begin(env)}[#{opt}]#{braces *args}\n#{body}\n#{self.end(env)}\n"
+    "#{self.begin(env)}[#{opt}]#{braces *args}\n#{body}\n#{self.end(env)}"
   end
 
   # normalize the name because it is an id
